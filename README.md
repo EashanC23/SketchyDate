@@ -2,15 +2,15 @@
   <img src="images/Sbar.svg" />
 </p>
 
-<p align="center">
-<a href="https://felixkratz.github.io/SketchyBar/setup">Install</a>
-<span> • </span>
-<a href="https://felixkratz.github.io/SketchyBar/config/bar">Documentation</a> 
-<span> • </span> 
-<a href="https://github.com/FelixKratz/SketchyBar/discussions/47?sort=top">Setups</a>
-<span> • </span> 
-<a href="https://github.com/FelixKratz/SketchyBar/discussions/12?sort=top">Plugins</a>
-</p>
+<!-- <p align="center"> -->
+<!-- <a href="https://felixkratz.github.io/SketchyBar/setup">Install</a> -->
+<!-- <span> • </span> -->
+<!-- <a href="https://felixkratz.github.io/SketchyBar/config/bar">Documentation</a>  -->
+<!-- <span> • </span>  -->
+<!-- <a href="https://github.com/FelixKratz/SketchyBar/discussions/47?sort=top">Setups</a> -->
+<!-- <span> • </span>  -->
+<!-- <a href="https://github.com/FelixKratz/SketchyBar/discussions/12?sort=top">Plugins</a> -->
+<!-- </p> -->
 
 <p align="center">
 <a href="https://opensource.org/licenses/"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg"></a>
