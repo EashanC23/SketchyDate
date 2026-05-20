@@ -30,31 +30,31 @@ leak: CFLAGS=-std=c99 -Wall -g
 leak: clean arm64
 leak:
 	/usr/libexec/PlistBuddy -c "Add :com.apple.security.get-task-allow bool true" bin/tmp.entitlements
-	codesign -s - --entitlements bin/tmp.entitlements -f ./bin/sketchybar
-	leaks -atExit -- ./bin/sketchybar
+	codesign -s - --entitlements bin/tmp.entitlements -f ./bin/sketchydate
+	leaks -atExit -- ./bin/sketchydate
 
 x86: CFLAGS+=-target x86_64-apple-macos10.13
-x86: $(ODIR)/sketchybar
+x86: $(ODIR)/sketchydate
 
 arm64: CFLAGS+=-target arm64-apple-macos11
-arm64: $(ODIR)/sketchybar
+arm64: $(ODIR)/sketchydate
 
 universal:
 	$(MAKE) x86
-	mv $(ODIR)/sketchybar $(ODIR)/sketchybar_x86
+	mv $(ODIR)/sketchydate $(ODIR)/sketchydate_x86
 	rm -rf $(ODIR)/*.o*
 	$(MAKE) arm64
-	mv $(ODIR)/sketchybar $(ODIR)/sketchybar_arm64
-	lipo -create -output $(ODIR)/sketchybar $(ODIR)/sketchybar_x86 $(ODIR)/sketchybar_arm64
+	mv $(ODIR)/sketchydate $(ODIR)/sketchydate_arm64
+	lipo -create -output $(ODIR)/sketchydate $(ODIR)/sketchydate_x86 $(ODIR)/sketchydate_arm64
 
 debug: CFLAGS=-std=c99 -Wall -g
 debug: arm64
 
 asan: CFLAGS=-std=c99 -Wall -g -fsanitize=address -fsanitize=undefined -fno-omit-frame-pointer
 asan: clean arm64
-	./bin/sketchybar
+	./bin/sketchydate
 
-$(ODIR)/sketchybar: $(SRC)/sketchybar.c $(OBJ) | $(ODIR)
+$(ODIR)/sketchydate: $(SRC)/sketchydate.c $(OBJ) | $(ODIR)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
 $(ODIR)/%.o: $(SRC)/%.c $(SRC)/%.h | $(ODIR)

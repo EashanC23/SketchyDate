@@ -139,7 +139,7 @@ void print_all_menu_items(FILE* rsp) {
   if (__builtin_available(macOS 11.0, *)) {
     if (!CGRequestScreenCaptureAccess()) {
       respond(rsp, "[!] Query (default_menu_items): Screen Recording "
-                   "Permissions not given. Restart SketchyBar after granting "
+                   "Permissions not given. Restart SketchyDate after granting "
                    "permissions.\n");
       return;
     }

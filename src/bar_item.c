@@ -418,7 +418,7 @@ bool bar_item_set_type(struct bar_item* bar_item, char* type) {
   if (bar_item->type == BAR_COMPONENT_SPACE) {
     if (!bar_item->script) { 
         bar_item_set_script(bar_item,
-            string_copy("sketchybar -m --set $NAME icon.highlight=$SELECTED"));
+            string_copy("sketchydate -m --set $NAME icon.highlight=$SELECTED"));
     }
 
     bar_item->update_mask |= UPDATE_SPACE_CHANGE;

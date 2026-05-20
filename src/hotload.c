@@ -45,7 +45,7 @@ static bool get_config_file(char *restrict filename, char *restrict buffer, int 
 
 void exec_config_file() {
   if (!*g_config_file
-    && !get_config_file("sketchybarrc", g_config_file, sizeof(g_config_file))) {
+    && !get_config_file("sketchydaterc", g_config_file, sizeof(g_config_file))) {
     printf("could not locate config file..\n");
     return;
   }
